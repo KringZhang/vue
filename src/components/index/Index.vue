@@ -1,14 +1,17 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+    <div>这是Index页</div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+    data() {
+        return {
+
+        }
+    }
 }
 </script>
 
 <style>
+
 </style>
