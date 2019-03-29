@@ -1,5 +1,8 @@
 <template>
-    <div>这是Index页</div>
+    <div>
+        <el-button type="primary">饿了么</el-button>
+        <el-button size="mini">确定</el-button>
+    </div>
 </template>
 
 <script>
