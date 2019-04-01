@@ -2,6 +2,9 @@
     <div>
         <el-input v-model="vin"></el-input>
         <el-button size="mini" @click="getInfo">确定</el-button>
+        <div class="box">
+            <div class="box-child1"></div>
+        </div>
     </div>
 </template>
 
@@ -31,6 +34,17 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="less" scoped>
+.box{
+    transform: translateX(50px);
+    width: 200px;
+    height: 50px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    .box-child1{
+        width: 50%;
+        height: 50%;
+        background-color: blue;
+    }
+}
 </style>

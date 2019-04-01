@@ -82,7 +82,11 @@ module.exports = {
       {
         test: /\\\\\\\\.(eot|woff|woff2|ttf)([\\\\\\\\?]?.*)$/,
         loader: "file"
-      }
+      },
+      {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader",
+      },
     ]
   },
   node: {
