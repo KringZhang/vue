@@ -16,6 +16,12 @@ const menus = [
                 src: 'flex/Flex',
                 children: null
             },
+            {
+                id: 'id-box',
+                title: '盒子模型',
+                src: 'box/Box',
+                children: null
+            },
         ]
     },
     {
