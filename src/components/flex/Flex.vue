@@ -1,5 +1,7 @@
 <template>
-Flex.vue
+    <div>
+        Flex.vue
+    </div>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
     <el-tabs v-model="editableTabsValue" type="card" closable @tab-click="clickTab" @tab-remove="removeTab">
         <el-tab-pane v-for="(item, index) in editableTabs" :key="item.id" :label="item.title" :name="item.id">
-            {{item.title}}
+            <component :is="item.component"></component>
         </el-tab-pane>
     </el-tabs>
 </template>
@@ -51,7 +51,9 @@ export default {
             this.editableTabsValue = id;
             const target = this.editableTabs.find(x => x.id === id);
             if(!target) {
-                this.editableTabs.push(res);
+                const tempComponent = require(`@/components/${res.src}.vue`).default;
+                const resCopy = { ...res, component: tempComponent };
+                this.editableTabs.push(resCopy);
             }
         })
     }

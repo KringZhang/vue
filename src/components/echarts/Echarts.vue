@@ -1,5 +1,7 @@
 <template>
-Echarts.vue
+    <div>
+        Echarts.vue
+    </div>
 </template>
 
 <script>

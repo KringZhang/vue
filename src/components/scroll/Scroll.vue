@@ -1,5 +1,7 @@
 <template>
-scroll.vue
+    <div>
+        scroll.vue
+    </div>
 </template>
 
 <script>
