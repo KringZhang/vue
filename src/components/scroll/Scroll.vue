@@ -1,6 +1,9 @@
 <template>
     <div>
-        scroll.vue
+        <el-select>
+            <el-option>选项一</el-option>
+            <el-option>选项二</el-option>
+        </el-select>
     </div>
 </template>
 
