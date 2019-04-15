@@ -77,7 +77,7 @@ export default {
                 grid: {
                     left: '3%',
                     right: '50px',
-                    bottom: '7%',
+                    bottom: '30px',
                     containLabel: true
                 },
                 xAxis: {
@@ -239,7 +239,7 @@ export default {
                 grid: {
                     left: '3%',
                     right: '50px',
-                    bottom: '7%',
+                    bottom: '30px',
                     containLabel: true
                 },
                 xAxis : [
@@ -313,9 +313,11 @@ export default {
 
 <style lang="less" scoped>
 .echarts{
+    width: calc(100% - 6px);//上面的gutter给值为12,这地方减一半宽度
+    @halfHeight: 300px;
     .el-card{
         margin-bottom: 20px;
-        height: 350px;
+        height: @halfHeight;
     }
     .title{
         margin-bottom: 10px;
@@ -327,7 +329,7 @@ export default {
         & > .left{
             display: flex;
             flex: 1;
-            height: 310px;
+            height: @halfHeight - 40;
             flex-direction: column;
             justify-content: center;
             & > .left-top-text{
@@ -345,7 +347,7 @@ export default {
         & > .right{
             display: flex;
             flex: 1;
-            height: 310px;
+            height: @halfHeight - 40;
             flex-direction: column;
             justify-content: center;
             & > .right-text{
@@ -354,24 +356,20 @@ export default {
                 font-size: 16px;
             }
             & > .right-number{
-                margin: 0 0 10px 16%;
-                width: 50%;
-                font-size: 16px;
+                .right-text();
                 font-weight: bold;
             }
         }
     }
     #lineGraph{
         width: 100%;
-        height: 310px;
+        height: @halfHeight - 40;
     }
     #pieGraph{
-        width: 100%;
-        height: 310px;
+        #lineGraph();
     }
     #barGraph{
-        width: 100%;
-        height: 310px;
+        #lineGraph();
     }
 }
 </style>
